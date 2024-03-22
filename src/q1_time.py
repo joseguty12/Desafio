@@ -1,8 +1,9 @@
 from typing import List, Tuple
 from datetime import datetime
 import pandas as pd
+# from memory_profiler import profile
 
-
+# @profile
 def q1_time(file_path: str) -> List[Tuple[datetime.date, str]]:
     # Leer el archivo JSON
     archivo = pd.read_json(file_path, lines=True)
@@ -35,5 +36,10 @@ def q1_time(file_path: str) -> List[Tuple[datetime.date, str]]:
     # Convertir a lista de tuplas
     valores_tupla = list(usuarios_mas_frecuentes[['date', 'username']].itertuples(index=False, name=None))
     
+    # Eliminar objetos que ya no se utilizan
+    del df_user, archivo, df_filtrado, conteos, usuarios_mas_frecuentes
+    
     return valores_tupla
     
+# file_path = "C:\\Users\\jgutisal\\Downloads\\Reto\\Ejecutables\\farmers-protest-tweets-2021-2-4.json"
+# q1_time(file_path)

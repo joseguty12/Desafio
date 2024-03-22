@@ -3,7 +3,9 @@ import pandas as pd
 from collections import Counter
 import re
 
+# from memory_profiler import profile
 
+# @profile
 def q2_time(file_path: str) -> List[Tuple[str, int]]:
     # Leer el archivo JSON
     archivo = pd.read_json(file_path, lines=True)
@@ -19,5 +21,11 @@ def q2_time(file_path: str) -> List[Tuple[str, int]]:
     # Obtener los 10 emojis más comunes
     emojis_top_10 = conteo_emojis.most_common(10)
     
+    # Eliminar objetos que ya no se utilizan
+    del archivo, conteo_emojis
+    
     # Devolver el resultado como una lista de tuplas
     return emojis_top_10
+
+# file_path = "C:\\Users\\jgutisal\\Downloads\\Reto\\Ejecutables\\farmers-protest-tweets-2021-2-4.json"
+# q2_time(file_path)
