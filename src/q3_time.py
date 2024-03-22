@@ -27,5 +27,8 @@ def obtener_username(lista):
     else:
         return []  # Devolver una lista vacía si la lista de usuarios está vacía
 
+# Ruta del archivo JSON
 # file_path = "C:\\Users\\jgutisal\\Downloads\\Reto\\Ejecutables\\farmers-protest-tweets-2021-2-4.json"
-# q3_time(file_path)
+
+# Ejecutar la función
+# q3_memory(file_path)

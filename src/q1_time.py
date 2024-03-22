@@ -41,5 +41,8 @@ def q1_time(file_path: str) -> List[Tuple[datetime.date, str]]:
     
     return valores_tupla
     
+# Ruta del archivo JSON
 # file_path = "C:\\Users\\jgutisal\\Downloads\\Reto\\Ejecutables\\farmers-protest-tweets-2021-2-4.json"
-# q1_time(file_path)
+
+# Ejecutar la función
+# q3_memory(file_path)
