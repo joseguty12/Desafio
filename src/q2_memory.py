@@ -40,5 +40,9 @@ def encontrar_emojis(mensaje):
 
 
 
+# Ruta del archivo JSON
 # file_path = "C:\\Users\\jgutisal\\Downloads\\Reto\\Ejecutables\\farmers-protest-tweets-2021-2-4.json"
-# q2_memory(file_path)
+
+# Ejecutar la función
+# q3_memory(file_path)
+

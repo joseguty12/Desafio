@@ -27,5 +27,8 @@ def q2_time(file_path: str) -> List[Tuple[str, int]]:
     # Devolver el resultado como una lista de tuplas
     return emojis_top_10
 
+# Ruta del archivo JSON
 # file_path = "C:\\Users\\jgutisal\\Downloads\\Reto\\Ejecutables\\farmers-protest-tweets-2021-2-4.json"
-# q2_time(file_path)
+
+# Ejecutar la función
+# q3_memory(file_path)

@@ -39,5 +39,9 @@ def q1_memory(file_path: str) -> List[Tuple[datetime.date, str]]:
     valores_tupla = [tuple(x) for x in archivo[['date', 'username']].values]
     return valores_tupla
     
+# Ruta del archivo JSON
 # file_path = "C:\\Users\\jgutisal\\Downloads\\Reto\\Ejecutables\\farmers-protest-tweets-2021-2-4.json"
-# q1_memory(file_path)
+
+# Ejecutar la función
+# q3_memory(file_path)
+
