@@ -1,7 +1,9 @@
 from typing import List, Tuple
 from datetime import datetime
 import pandas as pd
+# from memory_profiler import profile
 
+# @profile
 def q1_memory(file_path: str) -> List[Tuple[datetime.date, str]]:
     #Leendo el json
     archivo = pd.read_json(file_path, lines=True)
@@ -18,6 +20,8 @@ def q1_memory(file_path: str) -> List[Tuple[datetime.date, str]]:
     
     # Eliminar la columna 'user' para liberar memoria
     del archivo['user']
+    # Eliminar la columna 'user' para liberar memoria
+    del df_user
 
     #Se identifica las top10 fechas 
     resultado = archivo.groupby('date').size().reset_index(name='conteo').sort_values(by='conteo', ascending=False)
@@ -35,3 +39,5 @@ def q1_memory(file_path: str) -> List[Tuple[datetime.date, str]]:
     valores_tupla = [tuple(x) for x in archivo[['date', 'username']].values]
     return valores_tupla
     
+# file_path = "C:\\Users\\jgutisal\\Downloads\\Reto\\Ejecutables\\farmers-protest-tweets-2021-2-4.json"
+# q1_memory(file_path)
